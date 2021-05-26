@@ -124,6 +124,7 @@ def load_data(args):
     kr_database = merged_database.Database(Server.kr, args.input_dir)
     kr_database.load_database()
 
+    print("AAAAA", input_args.server)
     if input_args.server == "":
         cs_database = crossed_data.CrossServerDatabase(jp_database, na_database, kr_database, Server.jp)
     elif input_args.server.lower() == "jp":
